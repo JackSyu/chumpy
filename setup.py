@@ -13,9 +13,9 @@ from runpy import run_path
 
 install_reqs = parse_requirements('requirements.txt', session=False)
 try:
-    requirements = [str(ir.req) for ir in install_reqs]
+    install_requires = [str(ir.req) for ir in install_reqs]
 except:
-    requirements = [str(ir.requirement) for ir in install_reqs]
+    install_requires = [str(ir.requirement) for ir in install_reqs]
 
 def get_version():
     namespace = run_path('chumpy/version.py')
